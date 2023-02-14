@@ -396,7 +396,16 @@ Sorry, you don't have permission to visit this site.
 Not allowed to browse <B> any</B> category
 </td></tr>
 <tr><td class="eu_co">
-You tried to visit: A Website / URL that is blocked on this network by your network administrator.</div>
+<p>You were trying to go to:</p>
+	<p id="redirected-from"></p>
+
+	<script>
+		// Get the URL of the previous page from the browser's history
+		const redirectedFrom = document.referrer;
+
+		// Add the URL to the HTML document
+		document.getElementById('redirected-from').textContent = redirectedFrom;
+	</script></div>
 </td></tr><tr>
 <td class="hr"><hr></td>
 </tr>
